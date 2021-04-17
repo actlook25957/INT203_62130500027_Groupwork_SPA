@@ -3,3 +3,11 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.btn {
+  @apply px-6 py-2 mt-2 ring-1 text-white bg-sea-dark rounded-md focus:bg-sea-light font-mono;
+}
+
+.textArea {
+  @apply rounded-md shadow-md px-5 py-3 w-full mt-4 h-40 duration-500 font-mono;
+}
