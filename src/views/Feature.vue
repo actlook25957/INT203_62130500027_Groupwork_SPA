@@ -6,7 +6,7 @@
       </div>
       <form @submit.prevent="submitForm">
         <textarea
-          placeholder="insert your note .."
+          placeholder="Type feature here...."
           class="textArea ring-2 ring-gray-300"
           :class="{' ring-offset-sea-light': invalidInput,'ring-offset-salmon-dark': !invalidInput}"
           type="text"
@@ -14,6 +14,7 @@
           @blur="validating"
         ></textarea>
         <button class="btn" @click="validating">Submit</button>
+        <button class="btn ml-5 " @click="validating">Clear</button>
       </form>
     </add-card>
 
@@ -120,6 +121,10 @@ export default {
       } catch (error) {
         console.log(`Could not save! ${error}`);
       }
+    },
+
+    clearData() {
+      this.featureText = ""
     },
 
    
